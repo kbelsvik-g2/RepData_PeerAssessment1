@@ -65,7 +65,7 @@ Filling in of missing values will be done by using the average across all days
 of the corresponding time interval as caluatated in the previous section of
 this assignment.
 
-```{r fig.height=4}
+```{r}
 # Copy to a new data.frame
 activity2 <- activity
 
@@ -76,7 +76,7 @@ activity2$steps[missing] <- averageInterval[missingIntervals, "steps"]
 ```
 
 ### Histogram of all daily sums, ignoring days with no data after n/a replacement
-```{r}
+```{r fig.height=4}
 # Recalculate the daily sums
 dailySum2 <- tapply(activity2$steps, activity2$date, sum)
 
